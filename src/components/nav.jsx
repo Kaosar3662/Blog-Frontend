@@ -1,29 +1,54 @@
 import { Link } from 'react-router-dom';
 import '../assets/var.css';
 import Button from './primary-btn';
+import Navlink from "./Navlink";
+import { useState } from 'react';
 
 
 const nav = () => {
-
+  const [navState, setNavState] = useState("close")
+  
 
   return (
-    <div className="w-full bg-[var(--Neutral-Black-900)] px-[24px] py-[18px] ">
-      <div className="w-full:">
-        <div className="w-full flex justify-between items-center">
-          <Link to={'/'}>
-            <img src="/Logo.png" alt="" />
-          </Link>
-          <div className="flex gap-[20px] text-[#fff]">
+    <div className="flex fixed top-0 justify-center w-full bg-[var(--Neutral-Black-900)] py-[18px] px-[16px] md:px-[24px] sticky">
+      <div className="w-full max-w-[1200px]">
+        <div className="flex flex-col w-full items-start md:flex-row md:items-center md:justify-between">
+          <div className="flex justify-between w-full items-center md:w-fit">
+            <Link to={'/'}>
+              <img src="/Logo.png" alt="Logo" />
+            </Link>
+            <button
+              onClick={() => setNavState(navState === "open" ? "close" : "open")}
+              className="md:hidden text-white"
+            >
+              <span className="material-icons-outlined cursor-pointer">
+                {navState === "open" ? "close" : "menu"}
+              </span>
+            </button>
+          </div>
+
+          <div
+            className={`flex flex-col gap-[5px] md:flex-row md:items-center  overflow-hidden ${
+              navState === "open" ? "h-fit mt-6" : "max-h-0 md:max-h-none mt-0"
+            }`}
+          >
             <Link to={'/signup'}>
-              <p>Sign Up</p>
+              <Navlink text="Signup" />
             </Link>
             <Link to={'/login'}>
-              <p>Login</p>
+              <Navlink text="Login" />
             </Link>
+            <Link to={'/Blog'}>
+              <Navlink text="Blog" />
+            </Link>
+      
+            <a
+              href="https://cal.com/webocean/initial?user=webocean&overlayCalendar=true"
+              target="_Blank" className='mt-6 md:mt-0'
+            >
+              <Button btnTitle="Contact Us" />
+            </a>
           </div>
-          <Link to={'/contact'}>
-            <Button btnTitle="Contact Us" />
-          </Link>
         </div>
       </div>
     </div>
