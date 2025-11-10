@@ -1,11 +1,17 @@
 /* eslint-disable no-unused-vars */
-const blogCard = (props) => {
+import { useState, useEffect } from 'react';
+import Pagination from './Pagination';
+const blogCard = props => {
+
+
   return (
-    <div className="bg-(--Neutral-White-200) border-[1px] border-[(--Neutral-White-300)] w-full h-fit p-6 rounded-lg">
-      <img src={props.imgUrl} alt="" />
-      <h2>{props.title}</h2>
-      <p>{props.subtitle}</p>
- </div>
+    <div className="grid bg-(--Neutral-White-200) border-[1px] border-[(--Neutral-White-300)] w-full h-full p-6 rounded-lg gap-8">
+      <img src={props.data.image} alt="" className="w-full h-50" />
+      <div className="flex  flex-col">
+        <h5>{props.data.title}</h5>
+        <p>{props.data.subtitle}</p>
+      </div>
+    </div>
   );
 };
 
