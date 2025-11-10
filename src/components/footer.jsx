@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
 
-import '../assets/var.css';
-
 const footer = () => {
   return (
     <footer className="w-full px-[24px] bg-[var(--Neutral-Black-900)] pt-[1px]">

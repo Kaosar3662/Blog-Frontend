@@ -1,7 +1,7 @@
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { createRoot } from 'react-dom/client'
-import './assets/var.css'
+import "./assets/css/var.css"
 import App from './App.jsx'
 import NotFound from './pages/404.jsx';
 import Index from './pages/Index.jsx';
