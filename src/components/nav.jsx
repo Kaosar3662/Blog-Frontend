@@ -39,7 +39,7 @@ const nav = () => {
           >
             <Link 
             onClick={() =>
-                setNavState(navState === 'open' ? 'close' : 'open')
+                setNavState(navState === 'open' ? 'close' : '')
               }  className='w-fit' to={'/'}>
               <Navlink
               
@@ -49,7 +49,7 @@ const nav = () => {
             </Link>
             <Link 
             onClick={() =>
-                setNavState(navState === 'open' ? 'close' : 'open')
+                setNavState(navState === 'open' ? 'close' : '')
               }  className='w-fit' to={'/signup'}>
               <Navlink
               
@@ -59,7 +59,7 @@ const nav = () => {
             </Link>
             <Link 
             onClick={() =>
-                setNavState(navState === 'open' ? 'close' : 'open')
+                setNavState(navState === 'open' ? 'close' : '')
               }  className='w-fit' to={'/login'}>
               <Navlink
               
@@ -69,7 +69,7 @@ const nav = () => {
             </Link>
             <Link 
             onClick={() =>
-                setNavState(navState === 'open' ? 'close' : 'open')
+                setNavState(navState === 'open' ? 'close' : '')
               }  className='w-fit' to={'/Blog'}>
               <Navlink
               
