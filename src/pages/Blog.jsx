@@ -371,7 +371,7 @@ const Blog = () => {
 
   const [filteredData, setFilteredData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postperpage, setPostperpage] = useState(12);
+  const [postperpage, setPostperpage] = useState(6);
 
   useEffect(() => {
     setFilteredData(data);
