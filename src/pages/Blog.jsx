@@ -434,7 +434,7 @@ const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
-  const [postperpage, setPostperpage] = useState(6);
+  const [postperpage, setPostperpage] = useState(9);
 
   useEffect(() => {
     setFilteredData(data);
