@@ -6,34 +6,36 @@ const Pagination = props => {
   }
 
   const lastPage = pages.length;
-
-  return (
-    <>
-      {/* Prev Button */}
-      <button
-        className={`border px-2 py-0.5 w-fit cursor-pointer rounded-lg ${
-          props.currentPage === 1
-            ? 'opacity-50 pointer-events-none select-none'
-            : ''
-        }`}
-        onClick={() => props.setCurrentPage(props.currentPage - 1)}
-      >
-        <p>Prev</p>
-      </button>
-
-     { pages.map((page, index) => (
+  if (lastPage < 2) {
+    return;
+  } else {
+    return (
+      <>
+        {/* Prev Button */}
         <button
-          key={index}
-          onClick={() => props.setCurrentPage(page)}
-          className={`border px-2 py-0.5 w-full max-w-10 cursor-pointer rounded-lg ${
-            props.currentPage === page ? 'bg-(--Brand-Green)' : ''
+          className={`border px-2 py-0.5 w-fit cursor-pointer rounded-lg ${
+            props.currentPage === 1
+              ? 'opacity-50 pointer-events-none select-none'
+              : ''
           }`}
+          onClick={() => props.setCurrentPage(props.currentPage - 1)}
         >
-          {page}
+          <p>Prev</p>
         </button>
-      ))}
 
-      {/* {pages.length <= 5 ? (
+        {pages.map((page, index) => (
+          <button
+            key={index}
+            onClick={() => props.setCurrentPage(page)}
+            className={`border px-2 py-0.5 w-full max-w-10 cursor-pointer rounded-lg ${
+              props.currentPage === page ? 'bg-(--Brand-Green)' : ''
+            }`}
+          >
+            {page}
+          </button>
+        ))}
+
+        {/* {pages.length <= 5 ? (
         pages.map((page, index) => (
           <button
             key={index}
@@ -73,19 +75,20 @@ const Pagination = props => {
         </>
       )} */}
 
-      {/* Next Button */}
-      <button
-        className={`border px-2 py-0.5 w-fit cursor-pointer rounded-lg ${
-          props.currentPage === pages.length
-            ? 'opacity-50 pointer-events-none select-none'
-            : ''
-        }`}
-        onClick={() => props.setCurrentPage(props.currentPage + 1)}
-      >
-        <p>Next</p>
-      </button>
-    </>
-  );
+        {/* Next Button */}
+        <button
+          className={`border px-2 py-0.5 w-fit cursor-pointer rounded-lg ${
+            props.currentPage === pages.length
+              ? 'opacity-50 pointer-events-none select-none'
+              : ''
+          }`}
+          onClick={() => props.setCurrentPage(props.currentPage + 1)}
+        >
+          <p>Next</p>
+        </button>
+      </>
+    );
+  }
 };
 
 export default Pagination;
