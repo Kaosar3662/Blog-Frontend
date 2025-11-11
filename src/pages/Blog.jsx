@@ -369,7 +369,7 @@ const Blog = () => {
 
   const [filteredData, setFilteredData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postperpage, setPostperpage] = useState(8);
+  const [postperpage, setPostperpage] = useState(12);
 
   useEffect(() => {
     setFilteredData(data);
@@ -391,7 +391,7 @@ const Blog = () => {
             <BlogCard key={index} data={singledata} />
           ))}
         </div>
-        <div className='flex flex-col sm:flex-row sm:justify-between'>
+        <div className='flex flex-col gap-4 sm:flex-row sm:justify-between'>
           Total Products: {data.length - 1}
           <div className="flex gap-2.5 ">
             <Pagination

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const Pagination = props => {
   let pages = [];
   for (let i = 1; i <= Math.ceil(props.totalBlog / props.postperpage); i++) {
@@ -10,7 +11,7 @@ const Pagination = props => {
     <>
       {/* Prev Button */}
       <button
-        className={`border px-[8px] py-[2px] w-fit cursor-pointer rounded-lg ${
+        className={`border px-2 py-0.5 w-fit cursor-pointer rounded-lg ${
           props.currentPage === 1
             ? 'opacity-50 pointer-events-none select-none'
             : ''
@@ -24,8 +25,8 @@ const Pagination = props => {
         <button
           key={index}
           onClick={() => props.setCurrentPage(page)}
-          className={`border px-[8px] py-[2px] w-full max-w-[40px] cursor-pointer rounded-lg ${
-            props.currentPage === page ? 'bg-[var(--Brand-Green)]' : ''
+          className={`border px-2 py-0.5 w-full max-w-10 cursor-pointer rounded-lg ${
+            props.currentPage === page ? 'bg-(--Brand-Green)' : ''
           }`}
         >
           {page}
@@ -74,7 +75,7 @@ const Pagination = props => {
 
       {/* Next Button */}
       <button
-        className={`border px-[8px] py-[2px] w-fit cursor-pointer rounded-lg ${
+        className={`border px-2 py-0.5 w-fit cursor-pointer rounded-lg ${
           props.currentPage === pages.length
             ? 'opacity-50 pointer-events-none select-none'
             : ''
