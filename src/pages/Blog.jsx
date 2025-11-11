@@ -1,7 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
-import BlogCard from '../components/Blogcard';
+import BlogCard from '../components/Card/Blogcard';
 import Pagination from '../components/Pagination';
+import Search from '../components/Search';
 
 const Blog = () => {
   let data = [
@@ -380,22 +382,29 @@ const Blog = () => {
   const dataToShow = filteredData.slice(firstProductIndex, lastProductIndex);
 
   return (
-    <main className="gap-[50px] mt-[80px] md:mt-0 px-[16px]">
+    <main className="gap-[50px] mt-20 md:mt-0 px-4">
       <div className="grid w-full gap-8 max-w-[1200px]">
         <div className="grid place-content-center  ">
           <h1>All Blog</h1>
           <p>Subtitle is gonna be here</p>
+          <div>
+            <Search
+              data={data}
+              setFilteredData={setFilteredData}
+              setCurrentPage={setCurrentPage}
+            />
+          </div>
         </div>
         <div className="grid grid-cols-1 w-full sm:grid-cols-2 md:grid-cols-3 gap-6">
           {dataToShow.map((singledata, index) => (
             <BlogCard key={index} data={singledata} />
           ))}
         </div>
-        <div className='flex flex-col gap-4 sm:flex-row sm:justify-between'>
+        <div className="flex flex-col gap-4 sm:flex-row sm:justify-between">
           Total Products: {data.length - 1}
           <div className="flex gap-2.5 ">
             <Pagination
-              totalBlog={data.length}
+              totalBlog={filteredData.length}
               postperpage={postperpage}
               setCurrentPage={setCurrentPage}
               currentPage={currentPage}
