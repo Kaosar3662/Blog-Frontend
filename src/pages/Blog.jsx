@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
 import BlogCard from '../components/Blogcard';
 import Pagination from '../components/Pagination';
@@ -368,11 +369,11 @@ const Blog = () => {
 
   const [filteredData, setFilteredData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postperpage, setPostperpage] = useState(12);
+  const [postperpage, setPostperpage] = useState(8);
 
   useEffect(() => {
     setFilteredData(data);
-  }, [data]);
+  }, []);
 
   const lastProductIndex = currentPage * postperpage;
   const firstProductIndex = lastProductIndex - postperpage;
@@ -390,14 +391,16 @@ const Blog = () => {
             <BlogCard key={index} data={singledata} />
           ))}
         </div>
-        <div className='flex gap-2.5 '>
-
-        <Pagination
-          totalBlog={data.length}
-          postperpage={postperpage}
-          setCurrentPage={setCurrentPage}
-          currentPage={currentPage}
-        />
+        <div className='flex flex-col sm:flex-row sm:justify-between'>
+          Total Products: {data.length - 1}
+          <div className="flex gap-2.5 ">
+            <Pagination
+              totalBlog={data.length}
+              postperpage={postperpage}
+              setCurrentPage={setCurrentPage}
+              currentPage={currentPage}
+            />
+          </div>
         </div>
       </div>
       <div className="w-full grid-cols-2 h-fit"></div>
