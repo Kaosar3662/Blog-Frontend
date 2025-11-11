@@ -59,40 +59,47 @@ main {
 }
 h1 {
   font-size: 56px;
+  line-height: 64px;
   font-family: var(--font);
   font-weight: var(--medium);
 }
 
 h2 {
   font-size: 42px;
+  line-height: 50px;
   font-family: var(--font);
   font-weight: var(--medium);
 }
 
 h3 {
   font-size: 34px;
+  line-height: 42px;
   font-family: var(--font);
   font-weight: var(--medium);
 }
 h4 {
   font-size: 26px;
+  line-height: 34px;
   font-family: var(--font);
   font-weight: var(--medium);
 }
 h5 {
   font-size: 22px;
+  line-height: 30px;
   font-family: var(--font);
   font-weight: var(--medium);
 }
 
 h6 {
   font-size: 18px;
+  line-height: 26px;
   font-family: var(--font);
   font-weight: var(--medium);
 }
 
 a {
   text-decoration: none;
+  
 }
 
 @import 'tailwindcss';

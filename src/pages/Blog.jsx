@@ -382,18 +382,22 @@ const Blog = () => {
   const dataToShow = filteredData.slice(firstProductIndex, lastProductIndex);
 
   return (
-    <main className="gap-[50px] mt-20 md:mt-0 px-4">
+    <main className="gap-[50px] mt-20 md:mt-20 px-4">
       <div className="grid w-full gap-8 max-w-[1200px]">
-        <div className="grid place-content-center  ">
-          <h1>All Blog</h1>
-          <p>Subtitle is gonna be here</p>
-          <div>
-            <Search
-              data={data}
-              setFilteredData={setFilteredData}
-              setCurrentPage={setCurrentPage}
-            />
-          </div>
+        <div className="flex  flex-col gap-10">
+                    <div className="flex flex-col w-full items-center gap-2">
+                      <h1>All Blog</h1>
+                      <p>Subtitle is going to be here.</p>
+                    </div>
+
+                    <div className="flex gap-6 flex-col  w-full sm:flex-row sm:justify-between">
+                      <Search
+                        data={data}
+                        setFilteredData={setFilteredData}
+                        setCurrentPage={setCurrentPage}
+                      />
+                      filter
+                    </div>
         </div>
         <div className="grid grid-cols-1 w-full sm:grid-cols-2 md:grid-cols-3 gap-6">
           {dataToShow.map((singledata, index) => (
