@@ -6,7 +6,7 @@ const Login = () => {
       <div className="flex flex-col items-center text-center p-8 rounded-lg border bg-[var(--Neutral-White-200)] border-[var(--Neutral-White-300)] text-[var(--Neutral-Black-900)] w-full max-w-md">
         <img src="/logo2.png" alt="logo" className="w-8 md:w-8 mb-4" />
         <h5 className="text-lg md:text-xl font-semibold mb-2">
-          Welcome to the Profunds
+          Welcome to the ClickNews
         </h5>
         <p className="text-sm mb-6">Log in to continue.</p>
 
