@@ -3,8 +3,8 @@ import Button from '../components/primary-btn';
 
 const NotFound = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 bg-[var(--Neutral-White-300)]">
-      <div className="flex flex-col items-center text-center p-8 rounded-lg border bg-[var(--Neutral-White-200)] border-[var(--Neutral-White-300)] text-[var(--Neutral-Black-900)]">
+    <div className="min-h-screen flex items-center justify-center px-4 bg-(--Neutral-White-300)">
+      <div className="flex flex-col items-center text-center p-8 rounded-lg border bg-(--Neutral-White-200) border-(--Neutral-White-300) text-(--Neutral-Black-900)">
         <img
           src="/logo2.png"
           alt="logo"

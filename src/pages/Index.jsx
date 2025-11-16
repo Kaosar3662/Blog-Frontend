@@ -4,7 +4,7 @@ const Home = () => {
 
 
   return (
-    <div className="min-h-[100vh] flex justify-center items-center"
+    <div className="min-h-screen flex justify-center items-center"
     >
       <h1>
         You are at <span >HOME</span>

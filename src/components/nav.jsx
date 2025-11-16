@@ -10,7 +10,7 @@ const nav = () => {
   const isActive = path => location.pathname === path;
 
   return (
-    <div className="flex fixed top-0 justify-center w-full bg-(--Neutral-Black-900) py-[18px] px-[16px] md:px-[24px] md:sticky z-10">
+    <div className="flex fixed top-0 justify-center w-full bg-(--Neutral-Black-900) py-[18px] px-4 md:px-6 md:sticky z-10">
       <div className="w-full max-w-[1200px]">
         <div className="flex flex-col w-full items-start md:flex-row md:items-center md:justify-between">
           <div className="flex justify-between w-full items-center md:w-fit">
