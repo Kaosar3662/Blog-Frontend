@@ -15,7 +15,7 @@ const Navlink = (props) => {
      
   }else {
      return (
-       <div className="w-fit px-4 py-2.5 text-(--Neutral-White-400) rounded-md">
+       <div className="w-fit px-4 py-2.5 text-(--Neutral-White-400) rounded-lg">
          {props.text}
        </div>
      );
