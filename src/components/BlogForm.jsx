@@ -67,12 +67,15 @@ const BlogForm = () => {
           <label htmlFor="featured">This is a featured Blog</label>
         </div>
 
-        <label htmlFor="uploadimg" className="flex flex-col gap-4 h-fit cursor-pointer">
+        <label
+          htmlFor="uploadimg"
+          className="flex flex-col gap-4 h-fit cursor-pointer"
+        >
           <input
             type="file"
             id="uploadimg"
             ref={fileInputRef}
-            className="picture px-4 py-2 bg-(--Neutral-White-300) rounded-lg"
+            className="picture px-4 py-2 bg-(--Neutral-White-300) rounded-lg cursor-pointe"
             onChange={handleImageChange}
           />
           <img src={preview} alt="img" className="img rounded-lg" />

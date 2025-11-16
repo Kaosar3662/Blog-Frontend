@@ -14,10 +14,12 @@ const nav = () => {
       <div className="w-full max-w-[1200px]">
         <div className="flex flex-col w-full items-start md:flex-row md:items-center md:justify-between">
           <div className="flex justify-between w-full items-center md:w-fit">
-            <Link 
-            onClick={() =>
+            <Link
+              onClick={() =>
                 setNavState(navState === 'open' ? 'close' : 'open')
-              }  to={'/'}>
+              }
+              to={'/'}
+            >
               <img src="/Logo.png" alt="Logo" />
             </Link>
             <button
@@ -37,50 +39,47 @@ const nav = () => {
               navState === 'open' ? 'h-fit mt-6' : 'max-h-0 md:max-h-none mt-0'
             }`}
           >
-            <Link 
-            onClick={() =>
-                setNavState(navState === 'open' ? 'close' : '')
-              }  className='w-fit' to={'/'}>
+            <Link
+              onClick={() => setNavState(navState === 'open' ? 'close' : '')}
+              className="w-fit"
+              to={'/'}
+            >
               <Navlink
-              
                 text="Home"
                 varient={`${isActive('/') ? 'active' : ''}`}
               />
             </Link>
-            <Link 
-            onClick={() =>
-                setNavState(navState === 'open' ? 'close' : '')
-              }  className='w-fit' to={'/signup'}>
+            <Link
+              onClick={() => setNavState(navState === 'open' ? 'close' : '')}
+              className="w-fit"
+              to={'/signup'}
+            >
               <Navlink
-              
                 text="Signup"
                 varient={`${isActive('/signup') ? 'active' : ''}`}
               />
             </Link>
-            <Link 
-            onClick={() =>
-                setNavState(navState === 'open' ? 'close' : '')
-              }  className='w-fit' to={'/login'}>
+            <Link
+              onClick={() => setNavState(navState === 'open' ? 'close' : '')}
+              className="w-fit"
+              to={'/login'}
+            >
               <Navlink
-              
                 text="Login"
                 varient={`${isActive('/login') ? 'active' : ''}`}
               />
             </Link>
-
-
-            <a
-              href="https://cal.com/webocean/initial?user=webocean&overlayCalendar=true"
-              target="_Blank"
+            <Link
+             to="/contact"
               className="mt-6 md:mt-0 md:ml-5 "
             >
               <Button btnTitle="Contact Us" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
     </div>
   );
-};  
+};
 
 export default nav;

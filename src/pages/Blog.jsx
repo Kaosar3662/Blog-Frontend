@@ -436,7 +436,7 @@ const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
-  const [postperpage, setPostperpage] = useState(9);
+  const [postperpage, setPostperpage] = useState(12);
 
   useEffect(() => {
     setFilteredData(data);
@@ -465,7 +465,7 @@ const Blog = () => {
 
   return (
     <main className="gap-[50px] mt-20 md:mt-20 px-4">
-      <BlogForm/>
+      {/* <BlogForm/> */}
       <div className="grid w-full gap-8 max-w-[1200px]">
         <div className="flex  flex-col gap-10">
           <div className="flex flex-col w-full items-center gap-2">

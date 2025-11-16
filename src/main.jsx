@@ -8,6 +8,8 @@ import Index from './pages/Index.jsx';
 import Signup from './pages/signup.jsx';
 import Login from './pages/log-in.jsx';
 import Blog from './pages/Blog.jsx';
+import Contact from './pages/Contact.jsx';
+import Forgetpass from './pages/Forget.jsx';
 
 
 const router = createBrowserRouter([
@@ -19,6 +21,8 @@ const router = createBrowserRouter([
       { path: '*', element: <NotFound /> },
       { path: '/signup', element: <Signup /> },
       { path: '/login', element: <Login /> },
+      { path: '/forgetpass', element: <Forgetpass /> },
+      { path: '/contact', element: <Contact /> },
 
 
 
