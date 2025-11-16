@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from 'react';
 
-const blogCard = props => {
+const blogCard = (props) => {
 
 
   return (

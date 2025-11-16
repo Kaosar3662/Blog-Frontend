@@ -41,6 +41,17 @@ const BlogForm = () => {
           />
         </div>
         <div className="flex flex-col gap-2">
+          <label htmlFor="subtitle">Sub-Title</label>
+          <input
+            type="text"
+            id="subtitle"
+            name="subtitle"
+            placeholder="Sub-Title"
+            required
+            className="px-4 py-2 bg-(--Neutral-White-300) rounded-lg"
+          />
+        </div>
+        <div className="flex flex-col gap-2">
           <label htmlFor="category">Category</label>
           <input
             type="text"

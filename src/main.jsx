@@ -10,6 +10,7 @@ import Login from './pages/log-in.jsx';
 import Blog from './pages/Blog.jsx';
 import Contact from './pages/Contact.jsx';
 import Forgetpass from './pages/Forget.jsx';
+import Details from './pages/Blogdetails.jsx';
 
 
 const router = createBrowserRouter([
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
       { path: '/login', element: <Login /> },
       { path: '/forgetpass', element: <Forgetpass /> },
       { path: '/contact', element: <Contact /> },
+      { path: '/d', element: <Details /> },
 
 
 
