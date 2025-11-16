@@ -67,16 +67,7 @@ const nav = () => {
                 varient={`${isActive('/login') ? 'active' : ''}`}
               />
             </Link>
-            <Link 
-            onClick={() =>
-                setNavState(navState === 'open' ? 'close' : '')
-              }  className='w-fit' to={'/Blog'}>
-              <Navlink
-              
-                text="Blog"
-                varient={`${isActive('/Blog') ? 'active' : ''}`}
-              />
-            </Link>
+
 
             <a
               href="https://cal.com/webocean/initial?user=webocean&overlayCalendar=true"
